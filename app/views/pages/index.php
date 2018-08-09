@@ -1,3 +1,3 @@
  <?php require (APPROOT. '\views\includes\header.php'); ?>
- <h1>hello</h1>
+ <h1>hello <?php echo $data['title']; ?></h1>
   <?php require (APPROOT. '\views\includes\footer.php'); ?>
