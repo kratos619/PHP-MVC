@@ -14,4 +14,4 @@ define( 'APPROOT', dirname(dirname( __FILE__)));
 define('URLROOT','http://localhost/PHP-MVC');
 
 //site name
-define ('SITENAME','GMVC');
+define ('SITENAME','POST_USING_MVC');
