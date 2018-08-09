@@ -27,10 +27,10 @@ foreach($users as $user){
 
 // entering data 
 
-$name = "rahul";
-$email = 'rgamil.com';
-$role = "Admin";
-$sql = 'INSERT INTO USER(name,email,role) values(:name,:email,:role)';
-$stmt = $pdo->prepare($sql);
-$stmt->execute(['name'=>$name,'email'=>$email,'role'=>$role]);
-echo 'added Users';
+// $name = "rahul";
+// $email = 'rgamil.com';
+// $role = "Admin";
+// $sql = 'INSERT INTO USER(name,email,role) values(:name,:email,:role)';
+// $stmt = $pdo->prepare($sql);
+// $stmt->execute(['name'=>$name,'email'=>$email,'role'=>$role]);
+// echo 'added Users';
