@@ -1,7 +1,8 @@
 <?php
+// usersController extend BaseController
 class Users extends Controller {
     public function __construct(){
-
+        $this->userModel = $this->model('User');
     }
 
 
@@ -26,6 +27,12 @@ class Users extends Controller {
             // validate email
             if(empty($data['email'])){
                 $data['email_error'] = "Please Enter Email";
+            }else{
+                //check meail
+                if($this->userModel->findUserByEmail($data['email'])){
+                        $data['email_error'] = "This Email Is Already Taken";
+                }
+                
             }
             
             // validate name
