@@ -161,7 +161,7 @@ class Users extends Controller {
         $_SESSION['user_email'] = $user->email;
         $_SESSION['user_name'] = $user->name;
         //$_SESSION['user_id'] = $user->id;
-        return $this->view('pages/index');
+        redirect_to('posts/index');
     }
     public function logout(){
         $_SESSION['user_id'] = null;
@@ -170,14 +170,6 @@ class Users extends Controller {
         session_destroy();
         return redirect_to('users/login');
         
-    }
-    // check user loged in or not
-    public function userLoggedIn(){
-        if(iseet($_SESSION['user_id'])){
-            return true;
-        }else{
-            return false;
-        }
     }
 }
 

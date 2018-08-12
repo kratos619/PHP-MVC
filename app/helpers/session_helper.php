@@ -24,3 +24,11 @@ function flash($name='',$message='',$class='alert alert-success'){
         }
     }
 }
+ // check user loged in or not
+function userLoggedIn(){
+        if(isset($_SESSION['user_id'])){
+            return true;
+        }else{
+            return false;
+        }
+    }

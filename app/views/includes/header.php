@@ -11,7 +11,6 @@
 </head>
 <body>
     <?php include( APPROOT .  '\views\includes\navbar.php'); ?>
-    <br><br>
     <div class="container">
 
     
