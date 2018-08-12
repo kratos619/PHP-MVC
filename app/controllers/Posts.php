@@ -5,10 +5,16 @@ class Posts extends Controller {
         if(!userLoggedIn()){
             redirect_to('users/login');
         }
+
+        $this->postModel = $this->model('Post');
     }
 
     public function index(){
-        $data = [];
+        // get all posts 
+        $posts = $this->postModel->getPosts();
+        $data = [
+            "posts" => $posts
+        ];
         $this->view('posts/index',$data);
     }
 }
